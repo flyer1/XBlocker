@@ -10,6 +10,12 @@ XBlocker turns the whole process into one simple action:
 
 No menus to hunt through. No repetitive clicking. Just fast, intentional control over who gets to occupy your timeline.
 
+## See It in Action
+
+Hover over any post to reveal the compact **Block** control, or simply press `B` while the post is under your pointer.
+
+![XBlocker showing its one-click Block control on an X post](assets/xblocker-demo.png)
+
 It also adds an `A` shortcut for quickly liking or unliking the post under your pointer.
 
 ## Why XBlocker?
