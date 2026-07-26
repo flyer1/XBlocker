@@ -24,9 +24,11 @@ Liking should be just as effortless as blocking:
 
 `A` is a true toggle. Press it once to like the post. Press it again to remove your like. You can react at the speed you scroll without aiming for the tiny heart button every time.
 
-## Instantly Mute Videos
+## Instant Video Controls
 
 Hover over a post containing a video and press `M` to mute it. Press `M` again to turn the sound back on.
+
+Press `F` to open that video fullscreen. When you are finished, press `Esc` to leave fullscreen as usual.
 
 ## Keyboard Shortcuts
 
@@ -34,6 +36,7 @@ Hover over a post containing a video and press `M` to mute it. Press `M` again t
 | --- | --- |
 | `A` | Like or unlike the hovered post |
 | `B` | Block the hovered post's author |
+| `F` | Open the hovered post's video fullscreen |
 | `M` | Mute or unmute the hovered post's video |
 
 ## Why XBlocker?
@@ -42,7 +45,7 @@ Hover over a post containing a video and press `M` to mute it. Press `M` again t
 - **A serious time saver:** Moderate active threads at the speed you read them.
 - **Stay in context:** Block an account without navigating away from the conversation.
 - **Quick reactions:** Like or unlike posts without aiming for the heart button.
-- **Instant video control:** Toggle a video's sound without finding its volume control.
+- **Instant video controls:** Toggle sound or enter fullscreen without finding tiny player buttons.
 - **Typing protection:** Shortcuts are disabled while you are writing a post or using an input.
 - **No account credentials:** XBlocker uses X's existing on-page controls.
 
@@ -85,6 +88,7 @@ Use the instructions for your browser:
 4. Try the shortcuts:
    - Press `A` to like or unlike the hovered post.
    - Press `M` to mute or unmute a video in the hovered post.
+   - Press `F` to open a video in the hovered post fullscreen.
    - Press `B` only when you genuinely want to block that post's author.
 
 That's it. XBlocker will load automatically whenever you open Chrome or Edge.
@@ -101,6 +105,7 @@ That's it. XBlocker will load automatically whenever you open Chrome or Edge.
 - Hover a post or reply and press `B` to block its author instantly.
 - Hover a post or reply and press `A` to toggle its like on or off.
 - Hover a post containing a video and press `M` to toggle its sound on or off.
+- Hover a post containing a video and press `F` to open it fullscreen. Press `Esc` to exit.
 - You can also click the compact **Block** button shown on a hovered reply.
 - The shortcuts do nothing while you are typing in an input or post composer.
 

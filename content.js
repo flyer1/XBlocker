@@ -125,6 +125,36 @@
     toast("Could not find a video in this post", "error");
   }
 
+  function enterVideoFullscreen(article) {
+    const fullscreenButton = [...article.querySelectorAll('button[aria-label]')].find((button) => {
+      const label = button.getAttribute("aria-label")?.trim().toLowerCase() || "";
+      const compactLabel = label.replace(/[\s-]/g, "");
+      return compactLabel.includes("fullscreen") && !compactLabel.includes("exit");
+    });
+
+    if (fullscreenButton) {
+      fullscreenButton.click();
+      return;
+    }
+
+    const video = article.querySelector("video");
+    if (!video) {
+      toast("Could not find a video in this post", "error");
+      return;
+    }
+
+    const requestFullscreen = video.requestFullscreen?.bind(video) ||
+      video.webkitRequestFullscreen?.bind(video);
+    if (!requestFullscreen) {
+      toast("Fullscreen is not available for this video", "error");
+      return;
+    }
+
+    Promise.resolve(requestFullscreen()).catch(() => {
+      toast("Could not open this video fullscreen", "error");
+    });
+  }
+
   function enhanceArticle(article) {
     if (article.dataset.xblockerReady) return;
     article.dataset.xblockerReady = "true";
@@ -166,14 +196,15 @@
 
   document.addEventListener("keydown", (event) => {
     const key = event.key.toLowerCase();
-    if (!["a", "b", "m"].includes(key) || event.repeat || event.ctrlKey || event.metaKey || event.altKey || isTypingTarget(event.target)) return;
+    if (!["a", "b", "f", "m"].includes(key) || event.repeat || event.ctrlKey || event.metaKey || event.altKey || isTypingTarget(event.target)) return;
     const article = activeArticle || document.activeElement?.closest?.("article");
     if (!article) return;
     event.preventDefault();
     event.stopImmediatePropagation();
     if (key === "a") likeArticle(article);
     else if (key === "b") blockArticle(article);
-    else toggleVideoMute(article);
+    else if (key === "m") toggleVideoMute(article);
+    else enterVideoFullscreen(article);
   }, true);
 
   const observer = new MutationObserver(enhanceArticles);
