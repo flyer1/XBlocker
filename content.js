@@ -155,6 +155,10 @@
     });
   }
 
+  function findXBackButton() {
+    return visibleElements('[data-testid="app-bar-back"], button[aria-label="Back"]')[0] || null;
+  }
+
   function enhanceArticle(article) {
     if (article.dataset.xblockerReady) return;
     article.dataset.xblockerReady = "true";
@@ -196,7 +200,17 @@
 
   document.addEventListener("keydown", (event) => {
     const key = event.key.toLowerCase();
-    if (!["a", "b", "f", "m"].includes(key) || event.repeat || event.ctrlKey || event.metaKey || event.altKey || isTypingTarget(event.target)) return;
+    if (!["a", "b", "backspace", "f", "m"].includes(key) || event.repeat || event.ctrlKey || event.metaKey || event.altKey || isTypingTarget(event.target)) return;
+
+    if (key === "backspace") {
+      const backButton = findXBackButton();
+      if (!backButton) return;
+      event.preventDefault();
+      event.stopImmediatePropagation();
+      backButton.click();
+      return;
+    }
+
     const article = activeArticle || document.activeElement?.closest?.("article");
     if (!article) return;
     event.preventDefault();

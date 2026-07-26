@@ -30,11 +30,16 @@ Hover over a post containing a video and press `M` to mute it. Press `M` again t
 
 Press `F` to open that video fullscreen. When you are finished, press `Esc` to leave fullscreen as usual.
 
+## Faster Post Navigation
+
+After clicking into a post or reply, press `Backspace` to activate X's own Back button and return to the previous view. It only takes over when X is displaying that button, so it will not trigger unrelated browser navigation.
+
 ## Keyboard Shortcuts
 
 | Key | Action |
 | --- | --- |
 | `A` | Like or unlike the hovered post |
+| `Backspace` | Activate X's Back button when viewing a post |
 | `B` | Block the hovered post's author |
 | `F` | Open the hovered post's video fullscreen |
 | `M` | Mute or unmute the hovered post's video |
@@ -46,6 +51,7 @@ Press `F` to open that video fullscreen. When you are finished, press `Esc` to l
 - **Stay in context:** Block an account without navigating away from the conversation.
 - **Quick reactions:** Like or unlike posts without aiming for the heart button.
 - **Instant video controls:** Toggle sound or enter fullscreen without finding tiny player buttons.
+- **Faster navigation:** Leave a post detail view with `Backspace`.
 - **Typing protection:** Shortcuts are disabled while you are writing a post or using an input.
 - **No account credentials:** XBlocker uses X's existing on-page controls.
 
@@ -90,6 +96,7 @@ Use the instructions for your browser:
    - Press `M` to mute or unmute a video in the hovered post.
    - Press `F` to open a video in the hovered post fullscreen.
    - Press `B` only when you genuinely want to block that post's author.
+   - Click into a post, then press `Backspace` to activate X's Back button.
 
 That's it. XBlocker will load automatically whenever you open Chrome or Edge.
 
@@ -106,6 +113,7 @@ That's it. XBlocker will load automatically whenever you open Chrome or Edge.
 - Hover a post or reply and press `A` to toggle its like on or off.
 - Hover a post containing a video and press `M` to toggle its sound on or off.
 - Hover a post containing a video and press `F` to open it fullscreen. Press `Esc` to exit.
+- When viewing a post, press `Backspace` to activate X's Back button.
 - You can also click the compact **Block** button shown on a hovered reply.
 - The shortcuts do nothing while you are typing in an input or post composer.
 
