@@ -16,14 +16,33 @@ Hover over any post to reveal the compact **Block** control, or simply press `B`
 
 ![XBlocker showing its one-click Block control on an X post](assets/xblocker-demo.png)
 
-It also adds an `A` shortcut for quickly liking or unliking the post under your pointer.
+## Like or Unlike with One Key
+
+Liking should be just as effortless as blocking:
+
+> Hover over a post or reply and press `A`.
+
+`A` is a true toggle. Press it once to like the post. Press it again to remove your like. You can react at the speed you scroll without aiming for the tiny heart button every time.
+
+## Instantly Mute Videos
+
+Hover over a post containing a video and press `M` to mute it. Press `M` again to turn the sound back on.
+
+## Keyboard Shortcuts
+
+| Key | Action |
+| --- | --- |
+| `A` | Like or unlike the hovered post |
+| `B` | Block the hovered post's author |
+| `M` | Mute or unmute the hovered post's video |
 
 ## Why XBlocker?
 
 - **One-key blocking:** Replace several clicks with a single `B`.
 - **A serious time saver:** Moderate active threads at the speed you read them.
 - **Stay in context:** Block an account without navigating away from the conversation.
-- **Quick reactions:** Press `A` to toggle a like on the hovered post.
+- **Quick reactions:** Like or unlike posts without aiming for the heart button.
+- **Instant video control:** Toggle a video's sound without finding its volume control.
 - **Typing protection:** Shortcuts are disabled while you are writing a post or using an input.
 - **No account credentials:** XBlocker uses X's existing on-page controls.
 
@@ -63,7 +82,10 @@ Use the instructions for your browser:
 1. Open [x.com](https://x.com) or refresh it if it was already open.
 2. Hover over any post or reply.
 3. A small **Block** button should appear near the post's menu button.
-4. Press `B` only when you genuinely want to block that post's author. Press `A` to like or unlike the hovered post.
+4. Try the shortcuts:
+   - Press `A` to like or unlike the hovered post.
+   - Press `M` to mute or unmute a video in the hovered post.
+   - Press `B` only when you genuinely want to block that post's author.
 
 That's it. XBlocker will load automatically whenever you open Chrome or Edge.
 
@@ -78,9 +100,10 @@ That's it. XBlocker will load automatically whenever you open Chrome or Edge.
 
 - Hover a post or reply and press `B` to block its author instantly.
 - Hover a post or reply and press `A` to toggle its like on or off.
+- Hover a post containing a video and press `M` to toggle its sound on or off.
 - You can also click the compact **Block** button shown on a hovered reply.
 - The shortcuts do nothing while you are typing in an input or post composer.
 
 ## Notes
 
-XBlocker does not use your password or an unofficial account API. It activates X's existing Like control or block flow after your keypress. X can change its page structure at any time, so selectors may occasionally need updating.
+XBlocker does not use your password or an unofficial account API. It activates X's existing controls after your keypress. X can change its page structure at any time, so selectors may occasionally need updating.

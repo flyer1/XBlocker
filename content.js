@@ -101,6 +101,30 @@
     toast("Could not find the Like button", "error");
   }
 
+  function toggleVideoMute(article) {
+    const muteButton = [...article.querySelectorAll('button[aria-label]')].find((button) => {
+      const label = button.getAttribute("aria-label")?.trim().toLowerCase() || "";
+      return label === "mute" || label.startsWith("mute ") ||
+        label === "unmute" || label.startsWith("unmute ");
+    });
+
+    if (muteButton) {
+      const wasMuted = muteButton.getAttribute("aria-label").trim().toLowerCase().startsWith("unmute");
+      muteButton.click();
+      toast(wasMuted ? "Video unmuted" : "Video muted");
+      return;
+    }
+
+    const video = article.querySelector("video");
+    if (video) {
+      video.muted = !video.muted;
+      toast(video.muted ? "Video muted" : "Video unmuted");
+      return;
+    }
+
+    toast("Could not find a video in this post", "error");
+  }
+
   function enhanceArticle(article) {
     if (article.dataset.xblockerReady) return;
     article.dataset.xblockerReady = "true";
@@ -142,13 +166,14 @@
 
   document.addEventListener("keydown", (event) => {
     const key = event.key.toLowerCase();
-    if (!["a", "b"].includes(key) || event.repeat || event.ctrlKey || event.metaKey || event.altKey || isTypingTarget(event.target)) return;
+    if (!["a", "b", "m"].includes(key) || event.repeat || event.ctrlKey || event.metaKey || event.altKey || isTypingTarget(event.target)) return;
     const article = activeArticle || document.activeElement?.closest?.("article");
     if (!article) return;
     event.preventDefault();
     event.stopImmediatePropagation();
     if (key === "a") likeArticle(article);
-    else blockArticle(article);
+    else if (key === "b") blockArticle(article);
+    else toggleVideoMute(article);
   }, true);
 
   const observer = new MutationObserver(enhanceArticles);

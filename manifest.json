@@ -1,8 +1,8 @@
 {
   "manifest_version": 3,
   "name": "XBlocker",
-  "version": "0.2.1",
-  "description": "Fast keyboard shortcuts for liking posts and blocking authors on X and Twitter.",
+  "version": "0.3.0",
+  "description": "Fast keyboard shortcuts for blocking, liking, and controlling videos on X and Twitter.",
   "host_permissions": [
     "https://x.com/*",
     "https://twitter.com/*"
